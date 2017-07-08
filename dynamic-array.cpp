@@ -35,16 +35,21 @@ bool delete_element(const int& element) {
 	return false;
 }
 
+//Удаление элемента по индексу из массива. 
+//Функция возвращает true, если элемент был удален корректно, иначе - false. 
+bool delete_element_by_index(const unsigned& index) {
+	return false;
+}
+
 //Поиск элемента в массиве.
 //Функция возвращает true, если элемент был найден в массиве, иначе - false. 
 bool find_element(const int& element) {
 	return false;
 }
 
-//Вывести в stdout отсортированный по-неубыванию массив.
-//Исходный массив при этом не должен меняться.
-void print_sorted_array() {
-
+//Получить значение элемента по его индексу
+const int& get_element(const unsigned& index) {
+	return 42;
 }
 
 //Получить текущее количество элементов в массиве. 
