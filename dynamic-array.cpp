@@ -234,6 +234,24 @@ void exception_occurred_when_getiing_element_with_invalid_index_test2() {
 	check_preconditions();
 }
 
+void capacity_has_to_decrease_while_elements_were_deleted_test() {
+	init_array();
+
+	for (int i = 0; i < 2000; ++i) {
+		add_element(i);
+	}
+
+	for (int i = 0; i < 2000; ++i) {
+		delete_element_by_index(0);
+	}
+
+	assert(get_array_size() == 0);
+	assert(capacity < 100);
+
+	destroy_array();
+	check_preconditions();
+}
+
 int main()
 {
 	can_init_and_destroy_new_array_test();
@@ -244,6 +262,7 @@ int main()
 	can_delete_existed_element_test2();
 	exception_occurred_when_getiing_element_with_invalid_index_test();
 	exception_occurred_when_getiing_element_with_invalid_index_test2();
+	capacity_has_to_decrease_while_elements_were_deleted_test();
 	can_init_and_destroy_new_array_test();
 
 	system("PAUSE");
